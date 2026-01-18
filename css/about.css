@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: hsl(40 30% 96%);
+    color: hsl(30 20% 20%);
+    overflow-x: hidden;
+}
+
+/* ====  Smooth Scrolling ==== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ====  Section Label ==== */
+.section-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #f0ebe3;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 3rem;
+}
+
+.section-label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 1px;
+    background: hsl(30 30% 64%);
+}
+
+
+
+.section-about-label {
+    color: #6C0815;
+}
+
+/* ====  Signature Style ==== */
+.signature {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 2rem;
+    color: hsl(30 30% 64%);
+}
+
+
+/* ====  Flowing Line Animation ==== */
+.flowing-line path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawLine 3s ease-out forwards;
+}
+
+@keyframes drawLine {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* ====  Float Animation ==== */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* ====  Fade In Animation ==== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+.delay-400 {
+    animation-delay: 0.4s;
+}
+
+.delay-500 {
+    animation-delay: 0.5s;
+}
+
+.delay-600 {
+    animation-delay: 0.6s;
+}
+
+/* ====  Decorative Frame ==== */
+.decorative-frame {
+    position: absolute;
+    inset: -1rem;
+    border: 2px solid #6C0815;
+    border-radius: 1.5rem;
+    transform: rotate(3deg);
+    pointer-events: none;
+}
+
+/* ====  Timeline ==== */
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, hsl(30 30% 64%), transparent);
+    transform: translateX(-50%);
+}
+
+.timeline-dot {
+    width: 1rem;
+    height: 1rem;
+    background: hsl(30 30% 25%);
+    border-radius: 50%;
+    border: 3px solid hsl(40 30% 96%);
+    box-shadow: 0 0 0 2px hsl(30 30% 64%);
+}
+
+/* ====  Team Card ==== */
+.team-card {
+    transition: all 0.4s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+}
+
+.team-card:hover .team-image {
+    transform: scale(1.05);
+}
+
+.team-image {
+    transition: transform 0.4s ease;
+}
+
+/* ====  Value Card ==== */
+.value-card {
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    background: hsl(25 40% 88%);
+    transform: translateY(-4px);
+}
+
+/* ====  Stats Counter Animation ==== */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.stat-number {
+    animation: countUp 0.6s ease-out forwards;
+}
+
+/* ====  Mobile Menu ==== */
+.mobile-menu {
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+/* ====  Header Scroll Effect ==== */
+.header-scrolled {
+    background: hsla(40, 30%, 96%, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ====  Gradient Overlay ==== */
+.gradient-overlay {
+    background: linear-gradient(135deg, #710c183d 65%, #6c08157b 70%);
+}
+
+/* ====  Quote Style ==== */
+.quote-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 8rem;
+    line-height: 1;
+    color: hsla(30, 30%, 64%, 0.3);
+    position: absolute;
+}

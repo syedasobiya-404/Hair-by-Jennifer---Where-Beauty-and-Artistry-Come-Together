@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Hair by Jennifer</title>
+    <meta name="description"
+        content="Discover the story behind Arzoo Zafari Salon - 15+ years of passion, expertise, and dedication to making you feel beautiful.">
+
+    <!-- ====  Google Fonts  ==== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- ====  Tailwind CSS CDN  ==== -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ====  Tailwind Config  ==== -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: 'hsl(40 30% 96%)',
+                        foreground: '#6C0815',
+                        primary: {
+                            DEFAULT: 'hsl(30 30% 25%)',
+                            foreground: 'hsl(40 30% 96%)'
+                        },
+                        secondary: {
+                            DEFAULT: 'hsl(30 30% 64%)',
+                            foreground: 'hsl(30 20% 20%)'
+                        },
+                        muted: {
+                            DEFAULT: 'hsl(40 20% 90%)',
+                            foreground: '#6C0815'
+                        },
+                        accent: {
+                            DEFAULT: 'hsl(25 40% 88%)',
+                            foreground: '#6C0815'
+                        },
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- ====  Custom Styles  ==== -->
+    <link rel="stylesheet" href="../css/service.css">
+</head>
+
+<body>
+    <!-- ====  Header  ==== -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- ====  Logo  ==== -->
+                <a href="../index.html" class="font-serif text-2xl md:text-3xl font-medium text-foreground">
+                    Jennifer
+                </a>
+
+                <!-- ====  Desktop Navigation  ==== -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="../index.html"
+                        class="nav-link text-sm font-semibold text-foreground/80 hover:text-primary transition-colors">Home</a>
+                    <a href="./about.html"
+                        class="nav-link text-sm font-bold text-foreground/80 hover:text-primary transition-colors">About</a>
+                    <a href="./pages/booking.html"
+                        class="bg-[#6C0815] text-primary-foreground px-6 py-2.5 rounded-full text-sm font-medium hover:bg-[#6C0815]/90 transition-colors">
+                        Book Now
+                    </a>
+                </nav>
+
+                <!-- ====  Mobile Menu Button  ==== -->
+                <button id="mobileMenuBtn" class="md:hidden text-foreground p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- ====  Mobile Menu  ==== -->
+        <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 w-80 h-full bg-background shadow-2xl z-50 p-8">
+            <button id="closeMobileMenu" class="absolute top-6 right-6 text-foreground">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <nav class="flex flex-col gap-6 mt-16 ">
+                <a href="../index.html"
+                    class="text-lg font-medium text-foreground hover:text-primary transition-colors">Home</a>
+                <a href="./about.html"
+                    class="text-lg font-medium text-foreground hover:text-primary transition-colors">About</a>
+                <a href="./booking.html"
+                    class="bg-[#6C0815] text-primary-foreground px-6 py-3 rounded-full text-center font-medium hover:[#6C0815]/90 transition-colors mt-4">
+                    Book Now
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- ====  Hero Section  ==== -->
+    <section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+        <!-- ====  Background Image  ==== -->
+        <div class="absolute inset-0">
+            <img src="../img/main.jpg" alt="Luxury Salon Interior" class="w-full h-full object-cover">
+            <div class="absolute inset-0 gradient-overlay"></div>
+        </div>
+
+        <!-- ====  Content  ==== -->
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+            <span class="text-secondary section-label font-bold text-lg fade-in-up" style="--delay: 0s;">Our
+                Expertise</span>
+            <h1
+                class="font-serif text-3xl md:text-4xl lg:text-5xl  text-primary-foreground mt-4 leading-tight fade-in-up delay-200">
+                Services <span class="italic text-secondary">&</span> Menu
+            </h1>
+            <p class="text-secondary text-lg md:text-xl mt-6 max-w-2xl mx-auto fade-in-up delay-400">
+                We've been transforming not just appearances, but the way our clients feel about themselves.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- ====  Services Overview  ==== -->
+    <section class="py-20 lg:py-28 bg-cream">
+        <div class="container mx-auto px-6">
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <div class="text-center max-w-2xl mx-auto mb-16 fade-in-up">
+                    <h2 class="font-serif font-bold text-black text-3xl md:text-4xl lg:text-5xl mt-4">
+                        Service <span class="italic text-secondary">Price List</span>
+                    </h2>
+                </div>
+
+                <!-- ====  Hair Services  ==== -->
+                <div class="grid lg:grid-cols-2 gap-8 mb-16">
+                    <div class="service-category" data-animate>
+                        <div class="category-icon">
+                            <svg fill="none" stroke="#6C0815" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-foreground text-4xl md:text-3xl mb-2">HAIR CUT</h3>
+                        <p class="text-charcoal/60 mb-6">Expert styling and precision cutting services</p>
+
+                        <div class="space-y-0">
+                            <div class="service-item">
+                                <div>
+                                    <div class="service-name">Haircut by Jennifer</div>
+                                </div>
+                                <div class="service-price">PKR 5,000/-</div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div>
+                                <div class="service-name">Haircut by Sofia</div>
+                            </div>
+                            <div class="service-price">PKR 5,000/-</div>
+                        </div>
+                    </div>
+                    <div class="service-category" data-animate>
+                        <div class="category-icon">
+                            <svg fill="none" stroke="#6C0815" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-foreground text-4xl md:text-3xl mb-2">ROOTS</h3>
+                        <div class="space-y-0">
+                            <div class="service-item">
+                                <div>
+                                    <div class="service-name">Grey Coverage (Ammonia-Free)</div>
+                                </div>
+                                <div class="service-price">PKR 6,500/-</div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div>
+                                <div class="service-name">Grey Coverage (Ammonia-Based)</div>
+                            </div>
+                            <div class="service-price">PKR 5,500/-</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-8 mb-16">
+                    <div class="service-category" data-animate>
+                        <div class="category-icon">
+                            <svg fill="none" stroke="#6C0815" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-foreground text-4xl md:text-3xl mb-2">HAIR COLOR</h3>
+                        <p class="text-charcoal/60 mb-6">TRANSFORMATIONS</p>
+
+                        <div class="space-y-0">
+                            <div class="service-item">
+                                <div>
+                                    <div class="service-name">One Tone Dye (Ammonia-Based)
+                                    </div>
+                                </div>
+                                <div class="service-price">PKR 8,000/-</div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div>
+                                <div class="service-name">One Tone Dye (Ammonia-Free)</div>
+                            </div>
+                            <div class="service-price">PKR 10,000/-</div>
+                        </div>
+                        <div class="service-item">
+                            <div>
+                                <div class="service-name">Highlights</div>
+                            </div>
+                            <div class="service-price">PKR 12,000/-</div>
+                        </div>
+                        <div class="service-item">
+                            <div>
+                                <div class="service-name">Lowlights</div>
+                            </div>
+                            <div class="service-price">PKR 12,000/-</div>
+                        </div>
+                        <div class="service-item">
+                            <div>
+                                <div class="service-name">Babylights</div>
+                            </div>
+                            <div class="service-price">PKR 14,000/-</div>
+                        </div>
+                        <div class="service-item">
+                            <div>
+                                <div class="service-name">Balayage
+                                </div>
+                            </div>
+                            <div class="service-price">PKR 14,000/-</div>
+                        </div>
+                        <div class="service-item">
+                            <div>
+                                <div class="service-name">Ombre
+                                </div>
+                            </div>
+                            <div class="service-price">PKR 16,000/-</div>
+                        </div>
+                        <div class="service-item">
+                            <div>
+                                <div class="service-name">Fashion Colors
+                                </div>
+                            </div>
+                            <div class="service-price">PKR 18,000/-</div>
+                        </div>
+                        <div class="service-item">
+                            <div>
+                                <div class="service-name">These are starting prices for chin-length hair.
+                                    Final charges depend on hair length and density.
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="service-category" data-animate>
+                        <div class="category-icon">
+                            <svg fill="none" stroke="#6C0815" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-foreground text-4xl md:text-3xl mb-2">HAIR TREATMENTS</h3>
+                        <div class="space-y-0">
+                            <div class="service-item">
+                                <div>
+                                    <div class="service-name">Glossing</div>
+                                </div>
+                                <div class="service-price">PKR 5,000/-</div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div>
+                                <div class="service-name">Toning</div>
+                            </div>
+                            <div class="service-price">PKR 6,000 – 12,000/-</div>
+                        </div>
+                        <div class="service-item">
+                            <div>
+                                <div class="service-name">Vitamina Treatment</div>
+                            </div>
+                            <div class="service-price">PKR 2,000/-</div>
+                        </div>
+                        <div class="service-item">
+                            <div>
+                                <div class="service-name">Bond Builder Treatment</div>
+                            </div>
+                            <div class="service-price">PKR 2,000/-</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ====  Featured Banner  ==== -->
+                <div class="featured-banner " data-animate>
+                    <div class="relative z-10 text-center">
+                        <div class="mb-6 lg:mb-0">
+                            <span class="section-label text-peach-light">IMPORTANT NOTES</span>
+                            <p class="font-serif text-3xl md:text-4xl text-white mt-2 mb-3">
+                                .All color services include blow-dry & styling
+                            </p>
+                            <p class="font-serif text-3xl md:text-4xl text-white mt-2 mb-3">
+                                .Exact color charges can only be quoted after consultation </p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        </div>
+    </section>
+
+    <!-- ====  Booking CTA Section  ==== -->
+    <section class="py-20 lg:py-28 bg-cream text-white relative overflow-hidden">
+
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-16 fade-in-up">
+                <span class="section-label section-about-label">Ready to Begin?</span>
+                <h2 class="font-serif font-bold text-black text-3xl md:text-4xl lg:text-5xl mt-4">
+                    Book Your <span class="italic text-secondary">Experience</span>
+                </h2>
+                <p class="text-muted-foreground mt-4">
+                    Transform your look and rejuvenate your spirit. Our expert stylists are ready to create something
+                    beautiful for you. </p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="./booking.html" class="btn-primary">
+                    Book Appointment
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====  Footer  ==== -->
+    <footer class="bg-foreground text-primary-foreground py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12">
+                <!-- ====  Brand  ==== -->
+                <div class="md:col-span-1">
+                    <h3 class="font-serif text-2xl font-semibold mb-4">Jennifer</h3>
+                    <p class="text-primary-foreground/70 text-sm leading-relaxed">
+                        Where Beauty and Artistry Come Together, Offering the Finest in Hair, Beauty, and Wellness. </p>
+                </div>
+
+                <!-- ====  Quick Links  ==== -->
+                <div>
+                    <h4 class="font-medium mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-primary-foreground/70">
+                        <li><a href="index.html" class="hover:text-primary-foreground transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-primary-foreground transition-colors">About</a>
+                        <li><a href="services&pricing.html"
+                                class="hover:text-primary-foreground transition-colors">Services & Pricing</a>
+                    </ul>
+                </div>
+
+                <!-- ====  Contact  ==== -->
+                <div>
+                    <h4 class="font-medium mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm text-primary-foreground/70">
+                        <li>123 Beauty Lane, Suite 100</li>
+                        <li>Karachi, Pakistan</li>
+                        <li class="mt-4">+92 333-272536</li>
+                        <li>hello@humnaferoze.com</li>
+                    </ul>
+                </div>
+
+                <!-- ====  Hours  ==== -->
+                <div>
+                    <h4 class="font-medium mb-4">Hours</h4>
+                    <ul class="space-y-2 text-sm text-primary-foreground/70">
+                        <li>Monday - Friday: 12AM - 9PM</li>
+                        <li>Saturday: 12AM - 9PM</li>
+                        <li>Sunday: 10AM - 10PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-primary-foreground/50 text-sm">
+                    © 2026 Jennifer Salon. All rights reserved.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://www.instagram.com/"
+                        class="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/"
+                        class="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====  JavaScript  ==== -->
+    <script src="../js/services.js"></script>
+</body>
+
+</html>

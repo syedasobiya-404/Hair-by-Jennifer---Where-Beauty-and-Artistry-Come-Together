@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair by Jennifer - Where Beauty and Artistry Come Together
+    </title>
+    <meta name="description"
+        content="Experience premium hair styling, beauty services, and spa treatments at Arzoo Zafari. Book your appointment today.">
+
+    <!-- ==== Google Fonts  ==== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- ==== Tailwind CSS CDN  ==== -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ==== Tailwind Config  ==== -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    },
+                    colors: {
+                        background: 'hsl(40 30% 96%)',
+                        foreground: '#6C0815',
+                        primary: {
+                            DEFAULT: 'hsl(30 30% 25%)',
+                            foreground: 'hsl(40 30% 96%)'
+                        },
+                        secondary: {
+                            DEFAULT: 'hsl(30 30% 64%)',
+                            foreground: 'hsl(30 20% 20%)'
+                        },
+                        muted: {
+                            DEFAULT: 'hsl(40 20% 90%)',
+                            foreground: '#6C0815'
+                        },
+                        accent: {
+                            DEFAULT: 'hsl(25 40% 88%)',
+                            foreground: '#6C0815'
+                        },
+                        cream: {
+                            DEFAULT: '#FAF7F2',
+                            dark: '#F5F0E8',
+                        },
+                        chocolate: {
+                            DEFAULT: '#3D2314',
+                            light: '#5A3A28',
+                        },
+                        peach: '#D4A574',
+                        caramel: '#B8956A',
+                        charcoal: '#4A3F35',
+                        nude: '#C9B8A8',
+                    },
+                },
+            },
+        }
+    </script>
+
+    <!-- ==== Custom CSS  ==== -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- ==== Header  ==== -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- ==== Logo  ==== -->
+                <a href="index.html.html" class="font-serif text-2xl md:text-3xl font-medium text-foreground">
+                    Jennifer
+                </a>
+
+                <!-- ==== Desktop Navigation  ==== -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="index.html"
+                        class="nav-link text-sm font-semibold text-foreground/80 hover:text-primary transition-colors">Home</a>
+                    <a href="./pages/about.html"
+                        class="nav-link text-sm font-bold text-foreground/80 hover:text-primary transition-colors">About</a>
+                    <a href="./pages/services.html"
+                        class="nav-link text-sm font-bold text-foreground/80 hover:text-primary transition-colors">Services
+                        & Pricing</a>
+                    <a href="#gallery"
+                        class="nav-link text-sm font-bold text-foreground/80 hover:text-primary transition-colors">Gallery</a>
+                    <a href="./pages/booking.html"
+                        class="bg-[#6C0815] text-primary-foreground px-6 py-2.5 rounded-full text-sm font-medium hover:bg-[#6C0815]/90 transition-colors">
+                        Book Now
+                    </a>
+                </nav>
+
+                <!-- ==== Mobile Menu Button  ==== -->
+                <button id="mobileMenuBtn" class="md:hidden text-foreground p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- ==== Mobile Menu  ==== -->
+        <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 w-80 h-full bg-background shadow-2xl z-50 p-8">
+            <button id="closeMobileMenu" class="absolute top-6 right-6 text-foreground">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <nav class="flex flex-col gap-6 mt-16 ">
+                <a href="index.html"
+                    class="text-lg font-medium text-foreground hover:text-primary transition-colors">Home</a>
+                <a href="./pages/about.html"
+                    class="text-lg font-medium text-foreground hover:text-primary transition-colors">About</a>
+                <a href="./pages/services.html"
+                    class="text-lg font-medium text-foreground hover:text-primary transition-colors">Services &
+                    Pricing</a>
+                <a href="#gallery"
+                    class="text-lg font-medium text-foreground hover:text-primary transition-colors">Gallery</a>
+                <a href="#contact"
+                    class="text-lg font-medium text-foreground hover:text-primary transition-colors">Contact</a>
+                <a href="./pages/booking.html"
+                    class="bg-[#6C0815] text-primary-foreground px-6 py-3 rounded-full text-center font-medium hover:[#6C0815]/90 transition-colors mt-4">
+                    Book Now
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- ==== Hero Section  ==== -->
+    <section class="relative h-screen min-h-[70vh] flex items-center justify-center overflow-hidden">
+        <!-- ==== Background Image  ==== -->
+        <div class="absolute inset-0">
+            <img src="./img/main.jpg" alt="Luxury Salon Interior" class="w-full h-full object-cover">
+            <div class="absolute inset-0 gradient-overlay"></div>
+        </div>
+
+
+        <!-- ==== Content  ==== -->
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+            <span class="section-label text-secondary font-bold text-lg  fade-in-up" style="--delay: 0s;">We Are
+                Open!</span>
+            <h1
+                class="font-serif  text-3xl md:text-4xl lg:text-5xl text-primary-foreground mt-4 leading-tight fade-in-up delay-200">
+                Where Beauty and Artistry
+
+                <span class="italic font-semibold block mt-2">Come Together</span>
+            </h1>
+            <p
+                class="font-serif text-secondary text-3xl md:text-4xl lg:text-5xl  mt-6 max-w-2xl mx-auto fade-in-up delay-400">
+                Book Your Appointment Today! </p>
+            <div class="fade-in-up" style="transition-delay: 0.6s;">
+                <a href="./pages/booking.html" class="btn-primary text-lg px-10 py-5">
+                    Book Online
+                </a>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- ==== About Founder Section  ==== -->
+    <section class="py-24 lg:py-32 relative overflow-hidden">
+        <!-- ==== Decorative SVG Line  ==== -->
+        <svg class="flowing-line absolute top-0 right-0 w-full h-full pointer-events-none" viewBox="0 0 800 600"
+            fill="none" preserveAspectRatio="none">
+            <path d="M 600 0 Q 700 200 500 300 T 600 600" stroke="#6C0815" stroke-width="2" fill="none" />
+        </svg>
+
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <!-- ==== Text Content  ==== -->
+                <div class="order-2 lg:order-1 fade-in-up">
+                    <span class="section-label section-about-label">Meet the Founder</span>
+
+                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight mb-6">
+                        Beyond a Salon —
+                        <span class="italic text-secondary"> A Reflection of Her Vision, Her Standard,</span>
+                        Your Experience.
+                    </h2>
+
+                    <p class="text-muted-foreground leading-relaxed mb-6">
+                        I’m <span class="text-secondary font-semibold">Humna</span>, a certified hairstylist and
+                        colorist based in Karachi, specializing in precision
+                        haircuts and custom-blended hair color. I take only 1–2 appointments per day to ensure a calm,
+                        private, and personalized experience where every client receives my complete attention.
+                    </p>
+                    <p class="text-muted-foreground leading-relaxed mb-6">
+                        At <span class="text-secondary font-semibold">Hair by Jennifer – Hair Studio</span>, quality
+                        always comes before quantity. From thoughtful
+                        consultations to seamless color results, every detail is handled with care, expertise, and a
+                        commitment to long-term hair health. </p>
+
+                    <div class="signature font-medium">Jennifer</div>
+                    <span class="text-xs uppercase tracking-wider text-muted-foreground mt-2 block">
+                        Founder & Creative Director
+                    </span>
+                </div>
+
+                <!-- ==== Image  ==== -->
+                <div class="order-1 lg:order-2 relative fade-in-up delay-200">
+                    <div class="relative">
+                        <div class="decorative-frame"></div>
+                        <img src="./img/IMG_0938.jpg" alt="Humna Feroz - Salon Owner"
+                            class="w-full h-[500px] lg:h-[600px] object-cover rounded-2xl shadow-2xl relative z-10">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==== Services Section  ==== -->
+    <section id="services" class="py-24 lg:py-32 bg-cream-dark relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 fade-in-up">
+                <span class="section-label section-about-label">What we do
+                </span>
+                <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl mt-4">
+                    Our <span class="italic text-secondary">Services</span>
+                </h2>
+                <p class="text-muted-foreground mt-4">
+                    Thoughtfully Curated for Every Client </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- ==== Layered Haircuts  ==== -->
+                <div class="value-card bg-muted p-8 rounded-2xl text-center fade-in-up">
+                    <div class="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="#6C0815" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z" />
+
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-xl mb-3">Layered Haircuts</h3>
+                    <p class="text-muted-foreground text-sm">My layered cuts are designed to enhance movement, shape,
+                        and volume while maintaining length and balance. Layers are customized to your
+                        face shape, hair density, and styling routine, ensuring the cut grows out seamlessly. The goal
+                        is a soft, flattering shape that styles
+                        easily and looks polished whether worn naturally or styled.</p>
+                </div>
+
+                <!-- ==== Lived-In Hair Color  ==== -->
+                <div class="value-card bg-muted p-8 rounded-2xl text-center fade-in-up delay-100">
+                    <div class="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="#6C0815" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-xl mb-3">Lived-In Hair Color</h3>
+                    <p class="text-muted-foreground text-sm">Lived-in color is all about soft blends, natural depth, and
+                        effortless grow-out. This service focuses on creating dimension that looks
+                        beautiful even months later, with no harsh lines or constant root touch-ups. Each color is
+                        customized to your natural base, skin tone,
+                        and maintenance preference, resulting in hair that looks expensive, natural, and easy to manage.
+                    </p>
+                </div>
+
+                <!-- ==== Client Experience  ==== -->
+                <div class="value-card bg-muted p-8 rounded-2xl text-center fade-in-up delay-200">
+                    <div class="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="#6C0815" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-xl mb-3">Client Experience</h3>
+                    <p class="text-muted-foreground text-sm">Every appointment is designed to be calm, personalized, and
+                        unrushed. I take limited clients per day to ensure full attention,
+                        proper consultations, and quality results. From understanding your hair history and lifestyle to
+                        explaining the process and aftercare,
+                        my focus is on making you feel heard, comfortable, and confident throughout your service — not
+                        just giving you good hair, but a good
+                        experience.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==== Gallery Section  ==== -->
+    <section id="gallery" class="py-24 lg:py-32 bg-cream">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in-up">
+                <span class="section-label section-about-label">Our Work
+                </span>
+                <h2 class="font-serif text-4xl md:text-5xl">
+                    See Our <span class="italic text-peach">Artistry</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+                <div class="gallery-image scale-in" style="transition-delay: 0.1s;">
+                    <video src="./videos/3956A687-93A0-4ED1-9256-14F340761A9F.mp4" controls autoplay muted loop
+                        playsinline></video>
+                </div>
+                <div class="gallery-image scale-in" style="transition-delay: 0.1s;">
+                    <img src="./img/services/plist1.jpg" alt="Hair styling" class="min-h-[200px] md:min-h-[300px]">
+                </div>
+                <div class="gallery-image row-span-2 scale-in" style="transition-delay: 0.2s;">
+                    <img src="./img/services/IMG_6520.JPG" alt="Beautiful hair result"
+                        class="h-full min-h-[420px] md:min-h-[620px]">
+                </div>
+                <div class="gallery-image scale-in" style="transition-delay: 0.4s;">
+                    <img src="./img/services/IMG_9272.jpg" alt="Hair coloring" class="min-h-[200px] md:min-h-[300px]">
+                </div>
+                <div class="gallery-image scale-in" style="transition-delay: 0.3s;">
+                    <video src="./videos/4057A98A-B30D-43B0-8F88-A19EA4D13E71.mp4" controls autoplay muted loop
+                        playsinline></video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==== Testimonials Section  ==== -->
+    <section class="py-20 lg:py-25 bg-[#6C0815] text-cream">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-12 md:gap-20 items-center fade-in-up">
+                <!-- ==== Label  ==== -->
+                <div class="md:w-1/4">
+                    <span class="section-label ">What they say</span>
+                    <h2 class="font-serif font-semibold text-secondary text-3xl md:text-4xl text-cream">
+                        Testimonials
+                    </h2>
+                </div>
+
+                <!-- ==== Quote  ==== -->
+                <div class="md:w-3/4 relative min-h-[200px] flex items-center">
+                    <div id="testimonialContainer" class="text-center md:text-left">
+                        <blockquote class="testimonial-quote mb-6">
+                            The custom-blended color was exactly what I wanted, even better than my reference. You can
+                            tell she genuinely cares about hair health and detail </blockquote>
+                        <cite class="text-peach not-italic font-medium">
+                            — Ayesha K.
+                        </cite>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==== Pagination Dots  ==== -->
+            <div class="flex justify-center md:justify-end gap-3 mt-12">
+                <button class="dot active" data-index="0"></button>
+                <button class="dot" data-index="1"></button>
+                <button class="dot" data-index="2"></button>
+                <button class="dot" data-index="3"></button>
+                <button class="dot" data-index="4"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==== Instagram Section  ==== -->
+    <section class="py-24 lg:py-32 bg-cream">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-12 fade-in-up">
+                <div>
+                    <span class="section-label section-about-label">Follow our journey</span>
+                    <h2 class="font-serif text-4xl md:text-5xl">
+                        Insta <span class="italic text-peach">Inspiration</span>
+                    </h2>
+                </div>
+
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-3 px-6 py-3 bg-[#6C0815] text-cream rounded-full hover:bg-[#8d0b1cd3] transition-colors">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                    <span class="text-sm font-medium">Follow us on Instagram</span>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                <div class="insta-card aspect-[4/5] scale-in" style="transition-delay: 0.1s;">
+                    <video src="./videos/6C3FBF54-6305-4473-87B3-1E5C1BEBCAA8.mp4" controls autoplay muted loop
+                        playsinline></video>
+                    <div class="insta-overlay">
+                        <div class="play-btn">
+                            <svg class="w-6 h-6 text-chocolate ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="insta-card aspect-[4/5] scale-in" style="transition-delay: 0.3s;">
+
+                    <video src="./videos/3F4480B2-F492-40BA-9D35-8581FF989A4C.mp4" controls autoplay muted loop
+                        playsinline></video>
+
+                    <div class="insta-overlay">
+                        <div class="play-btn">
+                            <svg class="w-6 h-6 text-chocolate ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="insta-card aspect-[4/5] scale-in" style="transition-delay: 0.4s;">
+                    <video src="./videos/FAF4CB42-3FFD-4B6C-99EF-8D165BC4F207.mp4" controls autoplay muted loop
+                        playsinline></video>
+                    <div class="insta-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==== Footer  ==== -->
+    <footer class="bg-foreground text-primary-foreground py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12">
+                <!-- ==== Brand  ==== -->
+                <div class="md:col-span-1">
+                    <h3 class="font-serif text-2xl font-semibold mb-4">Jennifer</h3>
+                    <p class="text-primary-foreground/70 text-sm leading-relaxed">
+                        Where Beauty and Artistry Come Together, Offering the Finest in Hair, Beauty, and Wellness. </p>
+                </div>
+
+                <!-- ==== Quick Links  ==== -->
+                <div>
+                    <h4 class="font-medium mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-primary-foreground/70">
+                        <li><a href="index.html" class="hover:text-primary-foreground transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-primary-foreground transition-colors">About</a>
+                        <li><a href="services&pricing.html"
+                                class="hover:text-primary-foreground transition-colors">Services & Pricing</a>
+                    </ul>
+                </div>
+
+                <!-- ==== Contact  ==== -->
+                <div>
+                    <h4 class="font-medium mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm text-primary-foreground/70">
+                        <li>123 Beauty Lane, Suite 100</li>
+                        <li>Karachi, Pakistan</li>
+                        <li class="mt-4">+92 333-272536</li>
+                        <li>hello@humnaferoze.com</li>
+                    </ul>
+                </div>
+
+                <!-- ==== Hours  ==== -->
+                <div>
+                    <h4 class="font-medium mb-4">Hours</h4>
+                    <ul class="space-y-2 text-sm text-primary-foreground/70">
+                        <li>Monday - Friday: 12AM - 9PM</li>
+                        <li>Saturday: 12AM - 9PM</li>
+                        <li>Sunday: 10AM - 10PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-primary-foreground/50 text-sm">
+                    © 2026 Jennifer Salon. All rights reserved.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://www.instagram.com/"
+                        class="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/"
+                        class="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==== JavaScript  ==== -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
